@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Avenstek HRMS | AI-Powered HR Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --theme-primary: #FE9603;
+        --theme-bg: #212529;
+      }
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #212529;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #495057;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #FE9603;
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Urbanist', 'sans-serif'],
+            },
+            colors: {
+              // Primary Orange Theme #FE9603
+              primary: {
+                50: '#fff8e1',
+                100: '#ffecb3',
+                200: '#ffe082',
+                300: '#ffd54f',
+                400: '#ffca28',
+                500: '#FE9603', // Base
+                600: '#fb8c00',
+                700: '#f57c00',
+                800: '#ef6c00',
+                900: '#e65100',
+                950: '#bf360c',
+              },
+              // Dark Gray Theme #212529
+              slate: {
+                750: '#2c3136',
+                800: '#343a40',
+                850: '#2b3035',
+                900: '#212529', // Base Dark
+                950: '#1a1d21',
+              }
+            },
+            animation: {
+              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'float': 'float 6s ease-in-out infinite',
+              'beam': 'beam 2s linear infinite',
+              'spin-slow': 'spin 8s linear infinite',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' },
+              },
+              beam: {
+                '0%': { transform: 'translateX(-100%)' },
+                '100%': { transform: 'translateX(100%)' },
+              }
+            }
+          },
+        },
+      }
+    </script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-slate-900 text-slate-200 antialiased selection:bg-primary-500 selection:text-white overflow-x-hidden">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
